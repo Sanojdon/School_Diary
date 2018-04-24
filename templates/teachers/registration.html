@@ -1,0 +1,45 @@
+{% extends "teachers/layout.html" %}
+{% block title %} Teacher Registration {% endblock %}
+{% block body %}
+ <div class="container">
+	 <form method="POST">
+    <div class="form-group">
+    <label for="tchr_institute_name">Institute Name :</label>
+    <select name="tchr_institute_name" class="form-control">
+      {% for institute in institutes : %}
+      <option value="{{ institute['inst_name'] }}">{{ institute['inst_name'] }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="tchr_name">Name :</label>
+    <input type="text" class="form-control" name="tchr_name">
+  </div>
+  <div class="form-group">
+    <label for="tchr_dob">Date of Birth :</label>
+    <input type="date" class="form-control" name="tchr_dob" />
+  </div>
+  <div class="form-group">
+    <label for="tchr_addres">Address :</label>
+    <textarea class="form-control" name="tchr_address"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="tchr_phone">Contact Number :</label>
+    <input type="text" class="form-control" name="tchr_phone" />
+  </div>
+  <div class="form-group">
+    <label for="tchr_email">Email :</label>
+    <input type="email" class="form-control" name="tchr_email" />
+  </div>
+  <div class="form-group">
+    <label for="tchr_pword">Password :</label>
+    <input type="password" class="form-control" name="pword" />
+  </div>
+  <!-- <div class="form-group">
+    <label for="tchr_conf_pword">Confirm Password :</label>
+    <input type="password" class="form-control" name="conf_pword" />
+  </div> -->
+  <button type="submit" class="btn btn-primary">Register</button>
+</form> 
+</div>
+{% endblock %}

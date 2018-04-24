@@ -1,0 +1,35 @@
+	{% extends "institutes/layout.html" %}
+	{% block title %} Institute Events {% endblock %}
+	{% block body %}
+		<h1>Institute Events</h1>
+		<h2>Events Till Now..</h2>
+		
+		<h2>Adding Events</h2>
+		<div class="container">
+			<form method="POST">
+				<div class="form-group">
+					<label for="evt_name">Event Name :</label>
+					<input type="text" class="form-control" name="evt_name">
+			    </div>
+			    <div class="form-group">
+	    <label for="evt_description">Description about the Event :</label>
+	    <textarea class="form-control" name="evt_description"></textarea>
+	  </div>
+	  <div class="form-group">
+	    <label for="evt_hosted">Hosted by :</label>
+	    <input type="text" class="form-control" name="evt_host" />
+	  </div>
+	  <div class="form-group">
+	    <label for="evt_date">Date of the event :</label>
+	    <input type="date" class="form-control" name="evt_date" />
+	  </div>
+	  <div class="form-group">
+	    <label for="evt_time">Time of the event :</label>
+	    <input type="text" class="form-control" name="evt_time" />
+	  </div>
+
+			    <button type="submit" class="btn btn-success">Create Event</button>
+
+			</form>
+		</div>
+	{% endblock %}

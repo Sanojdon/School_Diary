@@ -1,0 +1,17 @@
+{% extends "institutes/layout.html" %}
+{% block title %} Institute Login {% endblock %}
+{% block body %}
+	<div class="container">
+		<form method="POST">
+  <div class="form-group">
+    <label for="inst_email">Institute Email :</label>
+    <input type="email" class="form-control" name="inst_email">
+  </div>
+  <div class="form-group">
+    <label for="inst_password">Password :</label>
+    <input type="password" class="form-control" name="inst_password" />
+  </div>
+  <button type="submit" class="btn btn-success">Login</button>
+</form>
+	</div>
+{% endblock %}

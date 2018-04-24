@@ -1,0 +1,53 @@
+	{% extends "students/layout.html" %}
+	{% block title %} Students Homepage {% endblock %}
+	{% block body %}
+	<div class="container">
+		<form method="POST">
+			<div class="form-group">
+	    <label for="stud_institute_name">School Name :</label>
+	    <select name="stud_institute_name" class="form-control">
+      {% for institute in institutes : %}
+      <option value="{{ institute['inst_name'] }}">{{ institute['inst_name'] }}</option>
+      {% endfor %}
+    </select>
+	  		</div>
+	  		<div class="form-group">
+	    <label for="stud_name">Name :</label>
+	    <input type="text" class="form-control" name="stud_name">
+	  		</div>
+	  		<div class="form-group">
+	    <label for="stud_dob">Date of Birth :</label>
+	    <input type="date" class="form-control" name="stud_dob">
+	  		</div>
+	  		<div class="form-group">
+	    <label for="stud_standard">Standard :</label>
+	    <input type="text" class="form-control" name="stud_standard">
+	  		</div>
+	  		<div class="form-group">
+	    <label for="stud_address">Address :</label>
+	    <textarea class="form-control" name="stud_address"></textarea>
+	    	</div>
+	    	<div class="form-group">
+	    <label for="stud_phone">Contact Number :</label>
+	    <input type="text" class="form-control" name="stud_phone">
+	  		</div>
+	  		<div class="form-group">
+	    <label for="stud_parent">Father's Name :</label>
+	    <input type="text" class="form-control" name="stud_parent">
+	  		</div>
+	  		<div class="form-group">
+	    <label for="stud_email">Email :</label>
+	    <input type="email" class="form-control" name="stud_email">
+	  		</div>
+	  		<div class="form-group">
+	    <label for="stud_password">Password :</label>
+	    <input type="password" class="form-control" name="pword">
+	  		</div>
+	  		<!-- <div class="form-group">
+	    <label for="stud_password">Confirm Password :</label>
+	    <input type="password" class="form-control" name="conf_pword">
+	  		</div> -->
+	  		<button type="submit" class="btn btn-primary">Register</button>
+		</form>
+	</div>
+	{%endblock%}

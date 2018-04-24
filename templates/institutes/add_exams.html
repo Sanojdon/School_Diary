@@ -1,0 +1,32 @@
+	{% extends "institutes/layout.html" %}
+	{% block title %} Examination Timetable {% endblock %}
+	{% block body %}
+	<div class="container">
+		<form method="POST">
+			<div class="form-group">
+					<label for="cls">Class :</label>
+					<select name="cls">
+						{% for i in range(1,13): %}
+						<option value="{{i}}">{{i}}</option>
+						{% endfor %}
+					</select>
+				</div>
+				<table class="table table-dark exams">
+					<tr>
+						<td>Date</td>
+						<td>Subject</td>
+						<td>Time</td>
+					</tr>
+					{% for i in range(1, 7): %}
+					<tr>
+						<td><input type="date" name="date{{i}}"></td>
+						<td><input type="text" name="subject{{i}}"></td>
+						<td><input type="text" name="time{{i}}"></td>
+					</tr>
+					{% endfor %}
+					<tr>
+						<td colspan="3"><input type="submit" name="submit" value="Create Timetable"></td></tr>
+				</table>
+			</form>
+	</div>
+	{% endblock %}

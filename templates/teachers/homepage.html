@@ -1,0 +1,20 @@
+{% extends "teachers/layout.html" %}
+{% block title %} Teachers Homepage {% endblock %}
+{% block body %}
+<style>
+	footer{
+		margin-top: 238px
+	}
+</style>
+<div class="sidenav">
+	<a href="/institutes/add_event">Add Event</a>
+	<a href="/students/register">Add Student</a>
+	<a href="/teachers/activity">Add Activity</a>
+	<a href="/teachers/add_timetable">Add Timetable</a>
+	<a href="/teachers/view_doubts">View Student Doubts</a>
+	<a href="/logout">Log Out</a>
+</div>
+
+	<h1>Welcome {{name}}</h1>
+
+{% endblock %}

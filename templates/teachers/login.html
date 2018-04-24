@@ -1,0 +1,17 @@
+{% extends "teachers/layout.html" %}
+{% block title %} Teacher Login {% endblock %}
+{% block body %}
+	<div class="container">
+		<form method="POST">
+  <div class="form-group">
+    <label for="tchr_email">Email :</label>
+    <input type="email" class="form-control" name="tchr_email">
+  </div>
+  <div class="form-group">
+    <label for="tchr_password">Password :</label>
+    <input type="password" class="form-control" name="tchr_password" />
+  </div>
+  <button type="submit" class="btn btn-success">Login</button>
+</form>
+	</div>
+{% endblock %}

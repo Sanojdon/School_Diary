@@ -1,0 +1,61 @@
+	{% extends "institutes/layout.html" %}
+	{% block title %} Adding Timetable {% endblock %}
+	{% block body %}
+	<style>
+		
+	</style>
+	<div class="container">
+		<h1>Adding Timetable</h1>
+		<form method="POST">
+			<div class="form-group">
+					<label for="evt_name">Class :</label>
+					<select name="cs">
+						{% for i in range(1,13): %}
+						<option value="{i}">{{i}}</option>
+						{% endfor %}
+					</select>
+						<table class="table table-striped timetable">
+							<tr>
+									<td></td>
+									{% for j in range(1,9): %}
+									<td>{{j}}</td>
+									{% endfor %}
+								</tr>
+								<tr>
+									<td>Monday</td>
+									{% for l in range(1,9): %}
+									<td><input type="text" name="mon{{l}}"></td>
+									{% endfor %}
+								</tr>
+								<tr>
+									<td>Tuesday</td>
+									{% for l in range(1,9): %}
+									<td><input type="text" name="tues{{l}}"></td>
+									{% endfor %}
+								</tr>
+								<tr>
+									<td>Wednesday</td>
+									{% for l in range(1,9): %}
+									<td><input type="text" name="wed{{l}}"></td>
+									{% endfor %}
+								</tr>
+								<tr>
+									<td>Thursday</td>
+									{% for l in range(1,9): %}
+									<td><input type="text" name="thu{{l}}"></td>
+									{% endfor %}
+								</tr>
+								<tr>
+									<td>Friday</td>
+									{% for l in range(1,9): %}
+									<td><input type="text" name="fri{{l}}"></td>
+									{% endfor %}
+								</tr>
+														
+						</table>
+					</select>
+			</div>
+		<input type="submit" name="submit" value="Create Timetable">
+		</form>
+	</div>
+	{%endblock%}

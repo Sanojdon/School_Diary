@@ -1,0 +1,38 @@
+{% extends "students/layout.html" %}
+{% block title %} Students Homepage {% endblock %}
+{% block body %}
+<style>
+	footer{
+		margin-top: 238px
+	}
+	.main {
+    margin-left: 215px; /* Same as the width of the sidenav */
+    padding: 0px 10px;
+}
+</style>
+<div class="sidenav">
+	<a href="/students/notify?id={{result['_id']}}">Notifications</a>
+	<a href="/students/add_doubt?id={{result['_id']}}">Doubts</a>
+	<a href="/logout">Log Out</a>	
+	</div>
+	<div class="main">
+	<h1>Welcome {{result['stud_name']}}</h1>
+	<table class="table table-striped">
+		<thead class="thead-dark">
+			<tr>
+				<th>Activity Title</th>
+				<th>Activity Body</th>
+				<th>Activity Date</th>
+			</tr>
+		</thead>
+		{% for activity in act %}
+		<tr>
+			<td>{{activity['act_title']}}</td>
+			<td>{{activity['act_body']}}</td>
+			<td>{{activity['act_date']}}</td>
+		</tr>
+		{% endfor %}
+	</table>
+</div>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "institutes/layout.html" %}
+{% block title %} Institute Homepage {% endblock %}
+{% block body %}
+<style>
+	footer{
+		margin-top: 238px
+	}
+</style>
+<div class="sidenav">
+	<a href="/institutes/add_event">Add Event</a>
+	<a href="/institutes/add_exams">Add Examination Timetable</a>
+	<!-- <a href="/institutes/add_timetable">Add Timetable</a> -->
+	<a href="/institutes/edit">About {{detail}}</a>
+	<a href="/logout">Log Out</a>
+</div>
+
+	<div class="container">
+	<h1>Welcome {{detail}}</h1>
+	
+
+	
+</div>
+{% endblock %}

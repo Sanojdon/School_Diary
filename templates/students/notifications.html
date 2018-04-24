@@ -1,0 +1,49 @@
+{% extends "students/layout.html" %}
+{% block title %} Students Notifications {% endblock %}
+{% block body %}
+	<h1>Parent's Say</h1>
+	<h2>Notifications till now..</h2>
+	<table class="table table-striped">
+		<thead class="thead-dark">
+			<tr>
+			<th>Date</th>
+			<th>Title</th>
+			<th>Sent By</th>
+			<th>Approved By</th>
+		</tr>
+		</thead>
+		{% for record in records: %}
+		<tr>
+			<td>{{ record['ntfn_created_on'] }}</td>
+			<td>{{ record['ntfn_subject'] }}</td>
+			<td>{{ record['ntfn_author'] }}</td>
+			<td>{{ record['ntfn_approved'] }}</td>
+		</tr>
+		{% endfor %}
+	</table>
+	<div class="container">
+	<h2>Notify Teacher</h2>
+	<form method="POST" >
+	<div class="form-group">
+    <label for="type">Type of Notification :</label>
+    <select name="notification_type" class="form-control" id="type">
+					<option value="request">Permission</option>
+					<option value="suggest">Suggestion</option>
+				</select>
+  </div>
+  <div class="form-group">
+  	<label for="subject">Subject :</label>
+  	<input type="text" class="form-control" id="subject" name="subject">
+  </div>
+  <div class="form-group">
+  	<label for="body">Notification Content :</label>
+  	<textarea class="form-control" id="body" name="body"></textarea>
+  </div>
+  <div class="form-group">
+  	<label for="author">Sent By :</label>
+  	<input type="text" name="author" class="form-control" id="author">
+  </div>
+  <button type="submit" class="button btn-dark">Submit</button>
+	</form>
+</div>
+{% endblock %}

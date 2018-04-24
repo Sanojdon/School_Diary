@@ -1,0 +1,62 @@
+body{
+		background-color: #69baf1;
+	}
+a{
+		color : red;
+}
+img{
+	width: 100%
+}
+footer{
+	margin-top: 75px;
+	background-color: #3a3a3a;
+	color: #69baf1;
+	padding: 50px;
+	text-align: center;
+}
+img{
+	width: 100%;
+}
+h2{
+	color: blue;
+}
+.para-1{
+	margin-top: 65px;
+}
+.para-2{
+	margin-top: 165px;
+}
+.para-3{
+	margin-top: 130px;
+}
+h1, h2{
+	text-align: center;
+}
+/*Sidenav Designs*/
+.sidenav {
+    height: 45%;
+    width: 200px;
+    position: fixed;
+    top: 250px;
+    left: 0;
+    background-color: #191970;
+    overflow-x: hidden;
+    padding-top: 50px;
+}
+
+.sidenav a {
+    padding: 6px 6px 6px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/*Table Designs*/
+.table{
+	text-align: center;
+}

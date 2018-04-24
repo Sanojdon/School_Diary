@@ -1,0 +1,32 @@
+{% extends "teachers/layout.html" %}
+{% block title %} Student Doubts {% endblock %}
+{% block body %}
+<div class="container">
+<table class="table table-striped">
+	<thead class="thead-dark">
+		<tr>
+			<th>Student Name</th>
+			<th>Teacher Name</th>
+			<th>Title</th>
+			<th>Content</th>
+			<th>Dated</th>
+		</tr>
+	</thead>
+{% for doubt in doubts: %}	
+	<tr>
+		<td>{{ doubt['dbts_student'] }}</td>
+		<td>{{ doubt['dbts_teacher'] }}</td>
+		<td>{{ doubt['dbts_title'] }}</td>
+		<td>{{ doubt['dbts_body'] }}</td>
+		<td>{{ doubt['dbts_created_on'] }}</td>
+	</tr>
+{% endfor %}
+</table>
+</div>
+
+
+
+
+
+
+{% endblock %}

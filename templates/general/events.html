@@ -1,0 +1,21 @@
+{% extends "general/layout.html" %}
+{% block title %} Events {% endblock %}
+{% block body %}
+<h2>Events</h2>
+<table class="table table-dark">
+	<thead>
+		<td>Event Date</td>
+		<td>Event Name</td>
+		<td>Event Description</td>
+		<td>Hosted By</td>
+	</thead>
+	{% for event in events %}
+	<tr>
+		<td>{{event['evt_date'] }}</td>
+		<td>{{event['evt_name'] }}</td>
+		<td>{{event['evt_desc'] }}</td>
+		<td>{{event['evt_hosted']}}</td>
+	</tr>
+	{% endfor %}
+</table>
+{% endblock %}

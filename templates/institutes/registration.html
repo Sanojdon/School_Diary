@@ -1,0 +1,54 @@
+{% extends "institutes/layout.html" %}
+{% block title %} Institute Registration {% endblock %}
+{% block body %}
+<div class="container">
+	 <form method="POST">
+  <div class="form-group">
+    <label for="inst_name">Institute Name :</label>
+    <input type="text" class="form-control" name="inst_name" value="{{data['inst_name']}}">
+  </div>
+  <div class="form-group">
+    <label for="inst_principal">Principal Name :</label>
+    <input type="text" class="form-control" name="inst_principal" value="{{data['inst_principal']}}" />
+  </div>
+  <div class="form-group">
+    <label for="inst_addres">Institute Address :</label>
+    <textarea class="form-control" name="inst_address">{{data['inst_address']}}</textarea>
+  </div>
+  <div class="form-group">
+    <label for="inst_phone">Contact Number :</label>
+    <input type="text" class="form-control" name="inst_phone" value="{{data['inst_contact']}}"/>
+  </div>
+  <div class="form-group">
+    <label for="inst_website">Institute Website :</label>
+    <input type="text" class="form-control" name="inst_website" value="{{data['inst_website']}}"/>
+  </div>
+  <div class="form-group">
+    <label for="inst_email">Institute Email :</label>
+    <input type="email" class="form-control" name="inst_email" value="{{data['inst_email']}}"/>
+  </div>
+  <div class="form-group">
+    <label for="inst_description">Institute Description :</label>
+    <textarea class="form-control" name="inst_description">{{data['inst_description']}}</textarea>
+  </div>
+  <div class="form-group">
+    <label for="inst_affliated">Affliated to :</label>
+    <select name="inst_affliated" class="form-control">
+    	<option value="cbse">CBSE</option>
+    	<option value="icse">ICSE</option>
+    	<option value="state">State</option>
+    	<option value="other">Other</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="inst_pword">Password :</label>
+    <input type="password" class="form-control" name="pword" id="pword" />
+  </div>
+  <!-- <div class="form-group">
+    <label for="inst_conf_pword">Confirm Password :</label>
+    <input type="password" class="form-control" name="conf_pword" id="conf_pword"/>
+  </div> -->
+  <button type="submit" class="btn btn-primary">Register</button>
+</form> 
+</div>
+{% endblock %}
