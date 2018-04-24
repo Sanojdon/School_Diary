@@ -1,0 +1,1 @@
+The aim of this project is to provide a clean and transparent platform for the institutions, teachers and students to interact with each other. The application hence has three modules, namely, Institutions, Teachers and Students.
